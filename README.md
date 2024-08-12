@@ -72,3 +72,18 @@ export default prisma;
 ```javascript
 import prisma from "@/lib/prisma";
 ```
+
+13. Edit .eslintrc.json file to:
+
+```javascript
+{
+  "extends": ["next", "next/core-web-vitals"]
+}
+```
+
+14. Add build and postImstall commands to package.json:
+
+```javascript
+"build": "prisma generate && next build",
+"postinstall": "prisma generate",
+```
